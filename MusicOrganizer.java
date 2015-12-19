@@ -10,6 +10,7 @@ public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
+    private boolean indvalido;
         
     /**
      * Create a MusicOrganizer
@@ -61,13 +62,28 @@ public class MusicOrganizer
     }
     
     /**
-     * 
+     * Comprueba si el valor introducido es un índice válido.
      */
     public void checkIndex(int index)
     {
         if (index < 0 || index > files.size())
         {
             System.out.println("El valor no está en un rango válido");
+        }
+    }
+    
+    /**
+     * 
+     */
+    public void validIndex(int index)
+    {
+        if(index >= 0 && index < files.size())
+        {
+            indvalido = true;
+        }
+        else
+        {
+            indvalido = false;
         }
     }
 }

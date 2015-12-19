@@ -44,7 +44,7 @@ public class MusicOrganizer
      */
     public void listFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(indvalido = true) {
             String filename = files.get(index);
             System.out.println(filename);
         }
@@ -56,7 +56,7 @@ public class MusicOrganizer
      */
     public void removeFile(int index)
     {
-        if(index >= 0 && index < files.size()) {
+        if(indvalido = true) {
             files.remove(index);
         }
     }
@@ -73,7 +73,7 @@ public class MusicOrganizer
     }
     
     /**
-     * 
+     * Asignamos a un boolean un valor true si el índice es valido.
      */
     public void validIndex(int index)
     {
